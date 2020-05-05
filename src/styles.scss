@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+//@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/theming';
+@include mat-core();
+$mat-chartwellprimary: (
+    50 : #e0eef7,
+    100 : #b3d5eb,
+    200 : #80b9dd,
+    300 : #4d9ccf,
+    400 : #2687c5,
+    500 : #0072bb,
+    600 : #006ab5,
+    700 : #005fac,
+    800 : #0055a4,
+    900 : #004296,
+    A100 : #c1d8ff,
+    A200 : #8eb7ff,
+    A400 : #5b97ff,
+    A700 : #4187ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+$mat-chartwellaccent: (
+    50 : #f1e3ec,
+    100 : #ddb8cf,
+    200 : #c689b0,
+    300 : #af5a90,
+    400 : #9e3678,
+    500 : #8d1360,
+    600 : #851158,
+    700 : #7a0e4e,
+    800 : #700b44,
+    900 : #5d0633,
+    A100 : #ff8fc2,
+    A200 : #ff5ca7,
+    A400 : #ff298b,
+    A700 : #ff0f7d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$candy-app-primary: mat-palette($mat-chartwellprimary);
+$candy-app-accent:  mat-palette($mat-chartwellaccent, 300, 200, 500);
+
+// The warn palette is optional (defaults to red).
+$candy-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($candy-app-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-stepper-horizontal-line {
+    min-width: 0 !important;
+}
+.mat-radio-label-content {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

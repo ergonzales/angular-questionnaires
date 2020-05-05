@@ -1,0 +1,46 @@
+mat-form-field {
+    width: 100%;
+}
+mat-radio-button {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: black;
+    font-size: 1.15rem;    
+    line-height: 1.5;
+}
+
+.bottom {
+    margin-top: 1rem;
+
+    span.mat-subheading-2 {
+        font-weight: 500;
+    }
+}
+
+button {
+    margin: 1.5rem;
+    margin-left: 0;
+    text-transform: uppercase;
+}
+
+@media screen and (max-device-width: 576px){
+    .mat-horizontal-stepper-header{
+        display: block;
+
+        .mat-step-icon {
+            display: block;
+            clear: both;   
+            margin: auto;         
+        }
+        .mat-step-label {
+            margin: auto;
+            text-align: center;            
+        }
+    }
+}
